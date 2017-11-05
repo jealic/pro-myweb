@@ -3,7 +3,7 @@
 }
 
 #nav{
-  background-color: white;
+  
   background-image: url('http://www.juimg.com/tuku/yulantu/140113/328401-14011314232436.jpg');
   width: 100%;
 
@@ -33,11 +33,16 @@
 }
 
 
+.menu {
+  float: top;
+}
 
 .menu li {
   width: 140px;
+  padding: 10px 0px;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
+  border: 1px #fff;
 
   border-radius: 8px;
 
@@ -61,7 +66,7 @@ li:hover {
 
 li:hover a{
   color: #e0ffff;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 18px;
 }
 
@@ -206,6 +211,87 @@ hr.bar {
 
 #workgenre {
   text-align: center;
+}
+
+/* Below: Use the definition "@media" in CSS stylesheet */
+
+@media screen and (min-width: 1024px) {
+  .menu-button, .menu-button-checkbox {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) { 
+  .container {
+    width: auto;
+    height: 75.5px;
+  }
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: #4169e1;
+    background: transparent;
+    padding: 0 10px;
+    border: 0;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+
+  .menu-button-checkbox {
+    opacity: 0;
+    position: fixed;
+    right: 10px;
+    top: 20px;
+    width: 50px;
+    height: 40px;
+  }
+
+  /* Check the checkbox to undo ".menu" */
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    margin-top: 30px;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 55px;
+    width: 150px;
+    height: 100%
+    border-bottom: 3px solid #4169e1;
+    
+  }
+
+  .menu li {
+    right: 0;
+    border-radius: 0;
+    background: white;
+    color: darkslateblue;
+    font-size: 18px;
+
+
+  }
+
+  li:hover a {
+    background: white;
+    color: darkslateblue;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .item {
+    max-width: 100%;
+  }
+
+  form.contactform {
+    width: 80%;
+  }
+
+
 }
 
 
